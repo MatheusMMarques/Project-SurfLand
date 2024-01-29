@@ -11,7 +11,7 @@ body{
     font-family: sans-serif;
     background-color: #42A4A4;
     max-width: 100%;
-    height: 200vh;
+    height: 300vh;
     overflow-x: hidden;
 }
 
@@ -306,7 +306,7 @@ a{
 
   .title h1 {
     color: #fff;
-    width: 30%;
+    width: 35%;
     display: flex;
     justify-content: center;    
     text-align: center;
@@ -369,6 +369,117 @@ a{
     height: 300px;
     border-radius: 0px 20px 20px 0px;
     
+  }
+
+  .container-sobre{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 200px;
+  }
+
+  .box-info{
+    width: 50%;
+    border: 1px solid  #fff;
+    padding:10px;
+    margin: 30px;
+    color: #fff;
+    background-color: #378080;
+    box-shadow: rgb(38, 57, 77) 18px 19px 30px -10px;
+    transition: 0.5s;
+    line-height: 35px;
+    border-radius: 10px;
+  }
+
+  .box-info h1{
+    padding-bottom: 50px;
+    padding-top: 10px;
+  }
+
+  .box-info:hover{
+    transform: scale(1.05);
+  }
+  
+  .box-info .title_3:hover{
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+  }
+
+  .form_contato{
+    width: 50%;
+    margin: 30px;
+    border: 1px solid white;
+    background-color: #378080;
+    box-shadow: rgb(38, 57, 77) 18px 19px 30px -10px;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+  }
+
+  .form_contato h2{
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .form_contato:hover{
+    transform: scale(1.05);
+  }
+
+  .form_contato .contact_title:hover{
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+  }
+
+  .contact textarea{
+    margin-top: 10px;
+    background: #214e4e;
+    color: #000000;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow:  0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+
+  .contact input{
+    width: 100%;
+  }
+
+  .contact .text-box:first-child{
+    margin-right: 10px;
+  }
+
+  .contact .text-box{
+    padding: 12px;
+    background: #214e4e;
+    color: #ffffff;
+    border: none;
+    width: calc(50% - 10px);
+    height: 50px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow:  0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+
+  .contact .send-btn{
+    border-radius: 2px;
+    background-color: #214e4e;
+    border: 1px solid #fff;
+    color: #fff;
+    height: 40px;
+  }
+
+  .form_contato h2{
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
   }
 
   ::-webkit-scrollbar{

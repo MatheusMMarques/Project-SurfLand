@@ -28,4 +28,22 @@ function scrollClick(event) {
     }
 }
 
+function scrollClick2(event) {
+    event.preventDefault();
+
+    let cardSobre = document.querySelector("#cardSobre");
+
+    const offsetTop = cardSobre.offsetTop;
+    const scrollY = window.scrollY || window.pageYOffset;
+    const destination = offsetTop - scrollY;
+
+    // Verifica se a seção cardSobre já está visível
+    if (destination !== 0) {
+        window.scrollTo({
+            top: destination,
+            behavior: "smooth"
+        });
+    }
+}
+
 

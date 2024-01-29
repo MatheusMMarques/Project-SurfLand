@@ -22,7 +22,7 @@
             <ul class="nav-list">
                 <li class="active"><a href="#">Home</a></li>
                 <li onclick="scrollClick(event)"><a href="#">Praias</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li onclick="scrollClick2(event)"><a href="#">Sobre</a></li>
             </ul>
         </nav>
     </header>
@@ -94,6 +94,42 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="title">
+        <h1 id="cardSobre"> Sobre nós e Contato 📭</h1>
+    </div>
+
+    <div class="container-sobre">
+        <div class="box-info">
+            <h1 class="title_3">Sobre Nós</h1>
+            <span>
+
+                Bem-vindo à SurfLand, sua fonte especializada nas melhores praias de Florianópolis para os
+                amantes do surf!
+
+                Nossa equipe de entusiastas está aqui para oferecer informações detalhadas sobre o estilo das ondas em
+                cada praia, garantindo que sua experiência seja emocionante e adaptada ao seu nível de habilidade.
+
+                Além disso, buscamos facilitar sua jornada, fornecendo detalhes sobre estacionamentos próximos,
+                garantindo que você se concentre no que ama: surfar. Quanto aos custos, trabalhamos para garantir preços
+                acessíveis em escolas de surf e estabelecimentos parceiros.
+
+                Explore conosco as praias de Florianópolis, aproveite o melhor do surf e sinta a adrenalina das ondas
+                conosco na SurfLand. Sua próxima aventura está prestes a começar!
+        </div>
+
+        <div class="form_contato">
+            <h2 class="contact_title">CONTATO</h2>
+            <form action="" class="contact" method="post">
+                <div class="info-user">
+                    <input type="text" name="name" class="text-box" placeholder="Seu Nome" required>
+                    <input type="email" name="email" class="text-box" placeholder="Seu Email" required>
+                </div>
+                <textarea name="mensagem" rows="5" placeholder="Sua Mensagem" required></textarea>
+                <input type="submit" name="submit" class="send-btn" value="Enviar">
+            </form>
         </div>
     </div>
 
