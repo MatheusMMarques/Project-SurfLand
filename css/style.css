@@ -16,7 +16,7 @@ body{
 }
 
 .header{
-  padding-inline: 80px;
+  padding-inline: 100px;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,7 +35,7 @@ header.roll{
   z-index: 2;
   max-width: 100%;
   height: 100px;
-  margin-inline: auto;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,99 +136,23 @@ a{
   text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
 }
 
-@media (max-width: 875px){
-  .hamburger{
-    display: block;
-    z-index: 1;
-  }
-
-  .nav-list{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #378080;
-    clip-path: circle(100px at 90% -15%);
-    transition: 1s ease-out;
-
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0;
-    pointer-events: none;
-  }
-
-  .nav-list a {
-    font-size: 24px;
-    opacity: 0;
-    font-weight: bold;
-  }
-
-  .nav-list li:nth-child(1) a {
-    transition:  0.5s 0.2s;
-  }
-
-  .nav-list li:nth-child(2) a {
-    transition:  0.5s 0.4s;
-  }
-
-  .nav-list li:nth-child(3) a {
-    transition:  0.5s 0.6s;
-  }
-
-    /* Estilos ativos*/
-
-  .nav.active .nav-list{
-    clip-path: circle(1500px at 90% -15%);
-    pointer-events: all;
-  }
-
-  .nav.active .nav-list a{
-    opacity: 1;
-  }
-
-  .nav.active .hamburger{
-    position: fixed;
-    top: 26px;
-    right: 16px;
-    border-top-color: transparent;
-  }
-
-  .nav.active .hamburger::before{
-    transform: rotate(135deg);
-  }
-
-  .nav.active .hamburger::after{
-    transform: rotate(-135deg);
-    top: -7px;
-  }
-}
-
 .container_primary{
-  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   margin-top: 200px;
-
+  width: 100%;
 }
 
   .box{
     position: relative;
     z-index: 1;
-    padding: 2%;
-    max-width: 600px;
-    width: 100%;
-    box-sizing: border-box;
+    width: 500px;
   }
 
   .box img{
     width: 100%;
-    height: auto;
-    max-width: 100%;
     transform: scale(1.5) rotate(10deg);
-    margin-left: 0;
   }
 
   .info{
@@ -240,7 +164,6 @@ a{
     box-shadow: rgb(38, 57, 77) 18px 19px 30px -10px;
     text-align: center;
     font-size: 20px;
-    gap: 0.5;
     transition: transform 600ms ease-in-out;
   }
 
@@ -256,7 +179,7 @@ a{
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 500px;
+    margin-bottom: 100px;
     align-items: center;
     transition: transform 600ms ease-in-out;
   }
@@ -276,7 +199,6 @@ a{
   .info_2{
     display: flex;
     justify-content: space-between;
-    padding: 0px 0px 0px 0px;
     background-color: #378080;
     gap: 1.5;
   }
@@ -284,13 +206,14 @@ a{
   .info_2 span{
     width: 50%;
     text-align: center;
-    line-height: 22px;
-    padding: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 20px;
   }
 
   .card{
     background-color: #378080;
-    border: 1px solid white;
+    border: 2px solid white;
     color: #fff;
     border-radius: 20px;
     overflow: hidden;
@@ -299,21 +222,22 @@ a{
 
   .title_2{
     text-align: center;
-    padding: 25px;
     color: #fff;
     font-size: 30px;
+    margin-bottom: 50px;
   }
 
   .title h1 {
     color: #fff;
-    width: 35%;
+    width: 45%;
     display: flex;
     justify-content: center;    
     text-align: center;
-    margin: 20vh auto 0; /* Ajusta a margem para centralizar horizontalmente e define a margem superior como 20vh */
+    margin: 20vh auto 130px;
     font-size: 50px;
     position: relative;
-    transition: margin 0.5s; /* Adiciona transição para suavizar a alteração de margem */
+    padding: 50px;
+    transition: margin 0.5s; 
 }
 
 .title:hover h1 {
@@ -336,28 +260,6 @@ a{
     width: 100%;
   }
 
-  /* .nav-list a{
-    font-size: 25px;
-    color: #fff;
-    padding-block: 16px;
-    position: relative;
-    text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
-  }
-  
-  .nav-list a::after{
-    content: " ";
-    width: 0%;
-    height: 4px;
-    background-color: #fff;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: 0.5s;
-  }
-  
-  .nav-list a:hover::after{
-    width: 100%;
-  } */
 
   div .img{
     width: 50%;
@@ -366,7 +268,7 @@ a{
 
   .img img{
     width: 100%;
-    height: 300px;
+    height: 100%;
     border-radius: 0px 20px 20px 0px;
     
   }
@@ -374,26 +276,28 @@ a{
   .container-sobre{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
     margin-top: 200px;
+    align-items: center;
   }
 
   .box-info{
     width: 50%;
-    border: 1px solid  #fff;
-    padding:10px;
-    margin: 30px;
+    border: 5px solid  #fff;
+    padding:30px;
     color: #fff;
     background-color: #378080;
     box-shadow: rgb(38, 57, 77) 18px 19px 30px -10px;
     transition: 0.5s;
-    line-height: 35px;
+    line-height: 20px;
     border-radius: 10px;
+    margin-right: 600px;
   }
 
   .box-info h1{
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     padding-top: 10px;
   }
 
@@ -407,13 +311,15 @@ a{
 
   .form_contato{
     width: 50%;
-    margin: 30px;
-    border: 1px solid white;
+    border: 2px solid white;
     background-color: #378080;
     box-shadow: rgb(38, 57, 77) 18px 19px 30px -10px;
     border-radius: 10px;
     padding: 20px;
     transition: 0.5s;
+    margin-left: 500px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .form_contato h2{
@@ -490,4 +396,308 @@ a{
 ::-webkit-scrollbar-thumb{
     background-color: #42A4A4;
     border: 1px solid #fff;
+}
+
+
+@media (max-width: 1450px){
+  .title h1{
+    width: 50%;
+  }
+}
+
+@media (max-width: 1024px){
+  .box{
+    width: 350px;
+  }
+   .container_primary{
+    display: flex;
+   }
+
+   .title h1{
+    font-size: 30px;
+  }
+
+  .box-info{
+    margin-right: 300px;
+  }
+
+  .form_contato{
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 900px){
+  .container_primary{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info{
+    width: 100%;
+  }
+
+  .box img{
+    display: none;
+  }
+ 
+  .btn_{
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-list a {
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .logo{
+    width: 55px;
+  }
+
+  .logoMarca{
+    font-size: 25px;
+  }
+
+  .info_2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .info_2 span, img{
+    width: 100%;
+  }
+
+  div .img{
+    width: 100%;
+  }
+
+  .info_2 img{
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  .flex{
+    width: 50%;
+  }
+
+  .box-info span{
+    font-size: 13px;
+  }
+
+  .box-info h1{
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+
+  .form_contato h2{
+    font-size: 25px;
+  }
+
+  .contact textarea{
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px){
+  .info{
+  font-size: 15px;
+  }
+
+  .info h1{
+    font-size:25px;
+  }
+
+  .logo{
+    width: 45px;
+  }
+
+  .logoMarca{
+    font-size: 20px;
+  }
+
+  .btn_ button{
+    width: 230px;
+    height: 55px;
+    font-size:15px;
+  }
+
+  .flex{
+    width: 90%;
+  }
+
+  .info_2 span{
+    font-size:15px;
+  }
+
+  .title_2{
+    font-size: 25px;
+  }
+
+  .title h1{ 
+    width: 80%;
+    font-size: 40px;
+  }
+  
+  .box-info{
+      width: 400px;
+    }
+  
+  .form_contato{
+      width: 400px;
+    }
+}
+
+@media (max-width: 704px){
+  .box-info{
+    width: 500px;
+    margin-right: 0px;
+  }
+
+  .form_contato{
+    width: 500px;
+    margin-left: 0px;
+  }
+
+  .title h1{
+    width: 85%;
+  }
+
+  .nav-list{
+    display: none;
+  }
+
+  .info_2 span{
+    font-size: 13px;
+  }
+
+  .title_2{
+    font-size: 22px;
+  }
+
+  .flex{
+    width: 80%;
+  }
+
+}
+
+@media (max-width: 425px){
+  .box-info{
+    width: 350px;
+  }
+
+  .box-info span{
+    font-size: 15px;
+    line-height: 0;
+  }
+
+  .title h1{
+    font-size: 22px;
+  }
+
+  .box-info h1{
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .form_contato{
+    width: 350px;
+  }
+
+  .contact_title h2{
+    font-size: 10px;
+  }
+
+  .info_2 span{
+    line-height: 15.5px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 375px){
+  .info h1{
+    font-size: 23px;
+    font-weight: 300;
+    padding-bottom: 10px;
+  }
+
+  .container_primary{
+    width: 100%;
+  }
+
+  .btn_ {
+    margin-top: 100px;
+  }
+
+  .title h1{
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .box-info{
+    width: 300px;
+  }
+
+  .box-info span{
+    font-size: 12.5px;
+  }
+
+  .form_contato{
+    width: 300px;
+  }
+
+  .container-sobre{
+    margin-top: 0px;
+  }
+}
+
+@media (max-width:320px){
+  .info span{
+    font-size: 14px;
+  }
+
+  .info h1{
+    font-size: 20px;
+  }
+
+  .box{
+    width: 250px;
+  }
+
+  .logo{
+    width: 50px;
+  }
+
+  .logoMarca{
+    font-size: 25px;
+  }
+
+  .header{
+    padding-inline: 50px;
+  }
+
+  .info_2 span{
+    font-size: 12.5px;
+  }
+
+  .info_2 img{
+    height: 150px;
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  .title_2{
+    margin-bottom: 15px;
+  }
+
+  .box-info{
+    width: 280px;
+  }
+
+  .box-info span{
+    font-size: 13px;
+  }
+
+  .form_contato{
+    width: 280px;
+  }
 }
